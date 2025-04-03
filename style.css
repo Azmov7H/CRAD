@@ -1,0 +1,261 @@
+/* Global Style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    font-family: system-ui, sans-serif;
+    line-height: 1.5;
+}
+
+/* Container Style */
+.crad {
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+}
+
+/* Title Style */
+.title {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    padding: 10px;
+    color: green;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px #333;
+    margin-bottom: 15px;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+input:focus {
+    transform: scale(1.01);
+}
+
+.inp-p {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.inp-p input {
+    flex: 1 1 calc(33.333% - 10px); /* 3 inputs per row */
+    min-width: 120px;
+}
+
+small {
+    display: block;
+    background-color: red;
+    border-radius: 4px;
+    color: #fff;
+    padding: 3px;
+    height: max-content;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+small::before {
+    content: "title : ";
+}
+
+/* Submit Button */
+#submit {
+    background-color:#333;
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#submit:hover {
+    background-color: #222;
+    transform: scale(1.05);
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.buttons button {
+    background-color: #333;
+    cursor: pointer;
+    width: calc(50% - 5px);
+    height: 40px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.buttons button:hover {
+    background-color: #222;
+    transform: scale(1.05);
+}
+
+/* Single Button */
+.but {
+    background-color: rgb(44, 2, 72);
+    cursor: pointer;
+    height: 30px;
+    width: 60px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.but:hover {
+    background-color: rgb(83, 4, 135);
+    transform: scale(1.05);
+}
+
+/* Output Table */
+table {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 16px;
+    border-collapse: collapse;
+}
+
+table th {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 8px;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #555;
+}
+
+table tr:hover {
+    background-color: #444;
+    color: #fff;
+}
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    padding: 10px;
+  }
+
+/* Delete All Button */
+#but-deletall {
+    width: 100%;
+    margin: 15px 0;
+}
+
+#but-deletall #but {
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .crad {
+        width: 95%;
+    }
+
+    .inp-p input {
+        flex: 1 1 calc(50% - 10px); /* 2 inputs per row */
+        min-width: 140px;
+    }
+
+    .buttons button {
+        width: 48%;
+    }
+    table {
+        font-size: 14px;
+      }
+      th, td {
+        padding: 8px;
+      }
+}
+
+@media (max-width: 480px) {
+    .inp-p {
+        flex-direction: column;
+    }
+
+    .inp-p input {
+        flex: 1 1 100%; /* 1 input per row */
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .buttons button {
+        width: 100%;
+    }
+
+    table {
+        font-size: 12px;
+      }
+      th, td {
+        padding: 6px;
+      }
+      th {
+        font-size: 14px;
+      }
+}
+
+@media (max-width: 400px) {
+    .crad {
+        padding: 5px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #submit {
+        font-size: 14px;
+        height: 35px;
+    }
+
+    table {
+        font-size: 10px;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+
+    .buttons button {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
